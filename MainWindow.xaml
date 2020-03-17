@@ -7,6 +7,63 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <StackPanel Margin="30">
+            <TextBlock Text="Courses and Books App" TextAlignment="Center" FontSize="40"/>
+            <StackPanel Orientation="Horizontal">
+                <Border Width="430" Margin="20" Background="LightGray">
+                    <StackPanel Margin="30" Orientation="Horizontal">
+                        <StackPanel >
+                            <TextBlock Text="Book Title"/>
+                            <TextBox Width="100"/>
+                        </StackPanel>
+                        <StackPanel Margin="20,0,0,0">
+                            <TextBlock Text="ISBN"/>
+                            <TextBox Width="50"/>
+                        </StackPanel>
+                        <StackPanel Margin="20,0,0,0">
+                            <TextBlock Text="Author Name"/>
+                            <TextBox Width="100"/>
+                        </StackPanel>
+                        <Button VerticalAlignment="Bottom"  Width="60" Height="20" Margin="20,0,0,0" Content="Add Book" />
+                    </StackPanel>
+                </Border>
+                <Border Width="250" Margin="20"  Background="LightGray">
+                    <StackPanel  Margin="30"  Orientation="Horizontal">
+
+                        <StackPanel>
+                            <TextBlock Text="Course Title"/>
+                            <TextBox  Width="100"/>
+                        </StackPanel>
+                        <Button VerticalAlignment="Bottom" Height="20" Margin="20,0,0,0" Content="Add Course" />
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Border Width="430" Margin="20" Background="LightGray">
+                    <StackPanel Margin="30" Orientation="Horizontal">
+                        <StackPanel >
+                            <TextBlock Text="Book Title"/>
+                            <TextBox Width="100"/>
+                        </StackPanel>
+                        <StackPanel Margin="20,0,0,0">
+                            <TextBlock Text="Course Title"/>
+                            <TextBox Width="100"/>
+                        </StackPanel>
+
+                        <Button VerticalAlignment="Bottom"  Width="130" Height="20" Margin="20,0,0,0" Content="Assign Book to Course" />
+                    </StackPanel>
+                </Border>
+                <Border Width="250" Margin="20"  Background="LightGray">
+                    <StackPanel  Margin="30"  Orientation="Horizontal">
+                        <StackPanel>
+                            <TextBlock Text="Course Title"/>
+                            <TextBox  Width="100"/>
+                        </StackPanel>
+                        <Button  VerticalAlignment="Bottom" Height="20" Margin="20,0,0,0" Content="Show Info" />
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </StackPanel>
 
     </Grid>
 </Window>
