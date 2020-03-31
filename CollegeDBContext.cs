@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 
-namespace W9A_CodeFirstDemo
+namespace StephenBrimer_Assignment2
 {
     class CollegeDBContext: DbContext
     {
@@ -20,7 +20,7 @@ namespace W9A_CodeFirstDemo
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                @"Integrated Security=SSPI;Persist Security Info= False;Initial Catalog=CollegeDatabase;
+                @"Integrated Security=SSPI;Persist Security Info= False;Initial Catalog=a2db;
                 Data Source=DESKTOP-7082PM8\STEPHENBRIMERSQL"
             );
         }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace W9A_CodeFirstDemo
+namespace StephenBrimer_Assignment2
 {
     class Course
     {
