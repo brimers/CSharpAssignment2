@@ -15,13 +15,21 @@ namespace StephenBrimer_Assignment2
         public void AddBook(string title, string isbn, string authorName)
         {
 
+            var author = GetAuthor(authorName);
+
+
+            if (author == null)
+            {
+                author = new Author { Name = authorName };
+
+            }
+
             var book = new Book
             {
                 Title = title,
-                Author = authorName,
+                Author = author,
                 Isbn = isbn
             };
-
 
             var result = _collegeDatabase.Books.Where(b => b.Title.ToLower().Contains(title.ToLower()));
             if (result == null)
@@ -31,16 +39,17 @@ namespace StephenBrimer_Assignment2
             else
             {
                 _collegeDatabase.Books.Add(book);
+                //todo: here
+                _collegeDatabase.SaveChanges();
             }
 
-            
         }
 
         public void AddCourse(string title)
         {
 
             // not sure how to do if stmnt
-            if()
+            if (_collegeDatabase.Books.FirstOrDefault(b => b.Title.Equals(title)) != null)
             {
                 throw new Exception("Course alreayd exists");
             }
@@ -52,13 +61,11 @@ namespace StephenBrimer_Assignment2
             _collegeDatabase.Courses.Add(course);
             _collegeDatabase.SaveChanges();
 
-
-
         }
 
         public Course GetCourseByTitle(string title)
         {
-            var result = _collegeDatabase.Courses.Where(b => b.Title.ToLower().Contains(title.ToLower()));
+            var result = _collegeDatabase.Courses.FirstOrDefault(b => b.Title.ToLower().Contains(title.ToLower()));
 
             return result;
         }
@@ -80,15 +87,18 @@ namespace StephenBrimer_Assignment2
         public void AssignBookToCourse(string bookTitle, string courseTitle)
         {
 
-            
+            var book = _collegeDatabase.Books.FirstOrDefault(b => b.Title.Equals(bookTitle));
+            var course = _collegeDatabase.Courses.FirstOrDefault(c => c.Title.Equals(courseTitle));
 
+            course.Book = book;
 
+            _collegeDatabase.SaveChanges();
 
         }
 
         public Author GetAuthor(string name)
         {
-            return _collegeDatabase.Authors.Where(b => b.Author.ToLower().Contains(name.ToLower()));
+            return _collegeDatabase.Authors.FirstOrDefault((a => a.Name.Equals(name)));
         }
     }
 }
