@@ -17,7 +17,6 @@ namespace StephenBrimer_Assignment2
 
             var author = GetAuthor(authorName);
 
-
             if (author == null)
             {
                 author = new Author { Name = authorName };
@@ -51,7 +50,7 @@ namespace StephenBrimer_Assignment2
             // not sure how to do if stmnt
             if (_collegeDatabase.Books.FirstOrDefault(b => b.Title.Equals(title)) != null)
             {
-                throw new Exception("Course alreayd exists");
+                throw new Exception("Course already exists");
             }
             var course = new Course()
             {
