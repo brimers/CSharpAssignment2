@@ -12,54 +12,75 @@
             <StackPanel Orientation="Horizontal">
                 <Border Width="430" Margin="20" Background="LightGray">
                     <StackPanel Margin="30" Orientation="Horizontal">
-                        <StackPanel >
+                        <StackPanel >                                                   <!-- add book   -->
                             <TextBlock Text="Book Title"/>
-                            <TextBox Width="100"/>
+                            <TextBox Width="100"
+                                     x:Name="BookTitle_AddBook"
+                                     />
                         </StackPanel>
                         <StackPanel Margin="20,0,0,0">
                             <TextBlock Text="ISBN"/>
-                            <TextBox Width="50"/>
+                            <TextBox Width="50"
+                                     x:Name="Isbn_AddBook"
+                                     />
                         </StackPanel>
                         <StackPanel Margin="20,0,0,0">
                             <TextBlock Text="Author Name"/>
-                            <TextBox Width="100"/>
+                            <TextBox Width="100"
+                                     x:Name="AuthorName_AddBook"/>
                         </StackPanel>
-                        <Button VerticalAlignment="Bottom"  Width="60" Height="20" Margin="20,0,0,0" Content="Add Book" />
+                        <Button VerticalAlignment="Bottom"  Width="60" Height="20" Margin="20,0,0,0" Content="Add Book" 
+                                x:Name="Button_AddBook"
+                                Click="Button_AddBook_OnClick"
+                                />
                     </StackPanel>
                 </Border>
                 <Border Width="250" Margin="20"  Background="LightGray">
-                    <StackPanel  Margin="30"  Orientation="Horizontal">
-
+                    <StackPanel  Margin="30"  Orientation="Horizontal">                 <!-- add course   -->
                         <StackPanel>
                             <TextBlock Text="Course Title"/>
-                            <TextBox  Width="100"/>
+                            <TextBox  Width="100"
+                                      x:Name="CourseTitle_AddCourse"/>
                         </StackPanel>
-                        <Button VerticalAlignment="Bottom" Height="20" Margin="20,0,0,0" Content="Add Course" />
+                        <Button VerticalAlignment="Bottom" Height="20" Margin="20,0,0,0" Content="Add Course" 
+                                x:Name="Button_AddCourse"
+                                Click="Button_AddCourse_OnClick"
+                                />
                     </StackPanel>
                 </Border>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Border Width="430" Margin="20" Background="LightGray">
-                    <StackPanel Margin="30" Orientation="Horizontal">
+                    <StackPanel Margin="30" Orientation="Horizontal">               <!-- assign book to course   -->
                         <StackPanel >
                             <TextBlock Text="Book Title"/>
-                            <TextBox Width="100"/>
+                            <TextBox Width="100"
+                                     x:Name="BookTitle_AssBookToCourse"/>
                         </StackPanel>
                         <StackPanel Margin="20,0,0,0">
                             <TextBlock Text="Course Title"/>
-                            <TextBox Width="100"/>
+                            <TextBox Width="100"
+                                     x:Name="CourseTitle_AssBookToCourse"
+                                     />
                         </StackPanel>
 
-                        <Button VerticalAlignment="Bottom"  Width="130" Height="20" Margin="20,0,0,0" Content="Assign Book to Course" />
+                        <Button VerticalAlignment="Bottom"  Width="130" Height="20" Margin="20,0,0,0" Content="Assign Book to Course" 
+                                x:Name="Button_AssBookToCourse"
+                                Click="Button_AssBookToCourse_OnClick"/>
                     </StackPanel>
                 </Border>
                 <Border Width="250" Margin="20"  Background="LightGray">
-                    <StackPanel  Margin="30"  Orientation="Horizontal">
+                    <StackPanel  Margin="30"  Orientation="Horizontal">                     <!-- show course info   -->
                         <StackPanel>
                             <TextBlock Text="Course Title"/>
-                            <TextBox  Width="100"/>
+                            <TextBox  Width="100"
+                                      x:Name="CourseTitle_ShowCourse"
+                                      />
                         </StackPanel>
-                        <Button  VerticalAlignment="Bottom" Height="20" Margin="20,0,0,0" Content="Show Info" />
+                        <Button  VerticalAlignment="Bottom" Height="20" Margin="20,0,0,0" Content="Show Info"
+                                 x:Name="Button_ShowCourse"
+                                 Click="Button_ShowCourse_OnClick"
+                                 />
                     </StackPanel>
                 </Border>
             </StackPanel>

@@ -24,5 +24,30 @@ namespace StephenBrimer_Assignment2
         {
             InitializeComponent();
         }
+
+
+        // click event for adding book
+        private void Button_AddBook_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        //  click event for adding a course
+        private void Button_AddCourse_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        // click event for assigning a book to a course
+        private void Button_AssBookToCourse_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        //  click event for Show Course
+        private void Button_ShowCourse_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
